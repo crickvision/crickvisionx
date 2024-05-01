@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t#ia0fxljplj-ew%q!*%-%5)3j(+9k#f!$c*+0i(o%f587s#k+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['crickvision-x2sj.onrender.com','cricks-1.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['https://crickvisionx.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -124,4 +124,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CSRF_TRUSTED_ORIGINS = ['https://crickvision-x2sj.onrender.com/']
+CSRF_TRUSTED_ORIGINS = ['https://crickvisionx.onrender.com']
