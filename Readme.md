@@ -9,7 +9,7 @@
 
 > Initialising the `Project`
 
-If you got any king of library errors, execute this code
+If you got any kind of library errors, execute this code
 ```python
 pip install -r requirements.txt
 ```
