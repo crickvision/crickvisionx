@@ -478,6 +478,8 @@
 
 
                     <button class="bubbys" onclick="submitForm()">Submit</button>
+                <input type="text" id="bendfb" value="{{ fbdata }}" style="display: none;">
+
                     <form action="/reportSubmit/" method="post" id="vidform">
                         {% csrf_token %}
                         <input type="text" name="userid" id="obsuid2" style="display: none;">
@@ -603,16 +605,26 @@
                 }
             }
 
-            const fbcon = {
-                apiKey: "AIzaSyBjMWCZJS-y9VI7D0NOMSF8eZkNcIrD31M",
-                authDomain: "crickvisionx.firebaseapp.com",
-                databaseURL: "https://crickvisionx-default-rtdb.asia-southeast1.firebasedatabase.app",
-                projectId: "crickvisionx",
-                storageBucket: "crickvisionx.appspot.com",
-                messagingSenderId: "81350001620",
-                appId: "1:81350001620:web:258ad1c12fc03500f28c41",
-                measurementId: "G-TN28BN3NRV"
-            };
+
+
+            const datas = document.getElementById("bendfb").value;
+            console.log(datas);
+
+            // Replace single quotes with double quotes
+            const datass = datas.replace(/'/g, '"');
+            console.log(datass);
+
+            try {
+                // Attempt to parse the corrected JSON string
+                var fbcon = JSON.parse(datass);
+                console.log(fbcon);
+
+
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+            }
+
+
             const print = (dat) => { console.log(dat); }
             firebase.initializeApp(fbcon);
             function uploadVideo() {

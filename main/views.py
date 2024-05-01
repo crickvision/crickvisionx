@@ -38,14 +38,11 @@ config = {
     "storageBucket": os.getenv("FIREBASE_STORAGE_BUCKET"),
     "messagingSenderId": os.getenv("FIREBASE_MESSAGING_SENDER_ID"),
     "appId": os.getenv("FIREBASE_APP_ID"),
-    "measurementId": os.getenv("FIREBASE_MEASUREMENT_ID"),
 }
 global curr_user
 
 curr_user = None
 
-global logged 
-logged = False
 
 firebase = pyrebase.initialize_app(config)
 database = firebase.database()
@@ -115,7 +112,7 @@ def signInValidate(request):
                         size = len(user_ids)
                         print(size)
                         zipped_lists = zip(names,emails,user_ids,requests,uUrls)
-                        return render(request,"admin.html", {"namex":name,"zipped_lists":zipped_lists})
+                        return render(request,"admin.html", {"namex":name, "fbdata": fbdata,"zipped_lists":zipped_lists})
 
                     else:
                         videocount = int(database.child("users").child(userid).child("details").child("videos").get().val())
