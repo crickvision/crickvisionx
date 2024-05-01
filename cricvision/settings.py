@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t#ia0fxljplj-ew%q!*%-%5)3j(+9k#f!$c*+0i(o%f587s#k+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cricks-1.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['crickvision-x2sj.onrender.com','cricks-1.onrender.com','127.0.0.1']
 
 
 # Application definition
