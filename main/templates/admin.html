@@ -30,8 +30,8 @@
     <body style="font-family: Gantari;" style="background-color: #eae6f5;">
         <style>
             .reqmar {
-                height: 100%;
-                width: 100%;
+                block-size: 100%;
+                inline-size: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
@@ -43,25 +43,25 @@
                 border-radius: 11px;
                 padding: 20px;
                 gap: 1em;
-                width: 100%;
-                height: 100%;
+                inline-size: 100%;
+                block-size: 100%;
                 overflow-y: scroll;
             }
 
             .request::-webkit-scrollbar {
-                width: 5px;
+                inline-size: 5px;
                 background-color: transparent;
             }
 
             .request::-webkit-scrollbar-thumb {
                 background-color: #0047ab;
-                height: 50px;
+                block-size: 50px;
             }
 
             .report {
-                width: 200px;
+                inline-size: 200px;
                 border: dashed 2px #000000;
-                height: 100%;
+                block-size: 100%;
                 border-radius: 11px;
                 display: flex;
                 opacity: 0.8;
@@ -80,7 +80,7 @@
                 border-radius: 6px;
                 margin-block: 1em;
 
-                height: fit-content;
+                block-size: fit-content;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -91,16 +91,16 @@
                 flex-direction: column;
                 align-items: flex-end;
                 justify-content: center;
-                height: 100%;
+                block-size: 100%;
             }
 
             .vUrl {
-                width: 100%;
-                height: 2.2em;
+                inline-size: 100%;
+                block-size: 2.2em;
                 border-radius: 6px;
                 border: solid 1px #aaaaaaaa;
-                padding-left: 10px;
-                padding-right: 35px;
+                padding-inline-start: 10px;
+                padding-inline-end: 35px;
                 font-size: 18px;
                 font-family: monospace;
                 background-color: transparent;
@@ -123,11 +123,11 @@
             }
 
             .copy {
-                height: 40px;
-                width: 40px;
-                right: 0px;
-                top: 0;
-                bottom: 0;
+                block-size: 40px;
+                inline-size: 40px;
+                inset-inline-end: 0px;
+                inset-block-start: 0;
+                inset-block-end: 0;
                 margin-block: auto;
 
                 position: absolute;
@@ -140,7 +140,7 @@
             .userdiv {
                 border-radius: 11px;
                 padding: 10px;
-                height: fit-content;
+                block-size: fit-content;
                 gap: none;
                 display: flex;
                 padding-inline: 1.5em;
@@ -148,7 +148,7 @@
                 align-items: center;
                 justify-content: space-between;
                 border: solid 1px #a2a2a270;
-                margin-bottom: 1em;
+                margin-block-end: 1em;
 
 
             }
@@ -174,8 +174,8 @@
                 position: absolute;
                 inset: 0;
                 margin: auto;
-                width: 800px;
-                height: 70dvh;
+                inline-size: 800px;
+                block-size: 70dvh;
                 padding: 20px;
                 border-radius: 21px;
                 background-color: #fff;
@@ -203,8 +203,8 @@
             }
 
             .contx {
-                height: 100%;
-                width: 100%;
+                block-size: 100%;
+                inline-size: 100%;
                 gap: 10px;
                 display: flex;
                 flex-direction: column;
@@ -212,13 +212,13 @@
             }
 
             .contx input[type="text"] {
-                width: 100%;
-                height: 50px;
+                inline-size: 100%;
+                block-size: 50px;
                 border-radius: 6px;
                 background-color: transparent;
                 border: 1px solid rgba(0, 0, 0, 0.16);
 
-                padding-left: .5em;
+                padding-inline-start: .5em;
             }
 
             input:focus {
@@ -227,7 +227,7 @@
 
             .linex button {
                 border: none;
-                height: 1.5em;
+                block-size: 1.5em;
                 background-color: transparent;
                 font-size: 1.5em;
                 overflow: hidden;
@@ -238,9 +238,9 @@
 
 
             .linex {
-                top: 1em;
-                height: 2em;
-                width: 100%;
+                inset-block-start: 1em;
+                block-size: 2em;
+                inline-size: 100%;
                 display: flex;
                 justify-content: space-between;
 
@@ -249,12 +249,12 @@
             input[type="file"]::file-selector-button {
                 border-radius: 4px;
                 padding: 0 16px;
-                height: 40px;
+                block-size: 40px;
                 cursor: pointer;
                 background-color: white;
                 border: 1px solid rgba(0, 0, 0, 0.16);
                 box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-                margin-right: 16px;
+                margin-inline-end: 16px;
                 transition: background-color 200ms;
 
 
@@ -278,10 +278,10 @@
             <header class="header_section">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg custom_nav-container "
-                        style="height: 60px;display: flex; justify-content: space-between;">
+                        style="block-size: 60px;display: flex; justify-content: space-between;">
                         <a class="navbar-brand" href="">
                             <img src="https://crickvision.github.io/d/i/logo.png"
-                                style="height: 60px;width: fit-content;">
+                                style="block-size: 60px;inline-size: fit-content;">
                         </a>
                         <span id="dev">DEVELOPER</span>
                         <ul class="navbar-nav  ">
@@ -510,11 +510,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    height: 40px;
+                    block-size: 40px;
                     overflow: hidden;
 
                     button {
-                        height: 100%;
+                        block-size: 100%;
                         color: #fff;
                         border: none;
                         border-radius: 6px;
@@ -530,11 +530,11 @@
                 .imgvid {
                     display: flex;
                     gap: 10px;
-                    width: 100%;
+                    inline-size: 100%;
                     justify-content: space-between;
 
                     >div {
-                        width: 100%;
+                        inline-size: 100%;
                         border: 1px solid rgba(0, 0, 0, 0.16);
                         border-radius: 6px;
                         padding: 10px;
@@ -545,7 +545,7 @@
                 }
 
                 .bubbys {
-                    height: 100%;
+                    block-size: 100%;
                     color: #fff;
                     border: none;
                     border-radius: 6px;
