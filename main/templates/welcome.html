@@ -51,7 +51,7 @@
                     <nav class="navbar navbar-expand-sm custom_nav-container ">
                         <a class="navbar-brand" href="">
                             <img src="https://crickvision.github.io/d/i/logo.png"
-                                style="height: 80px; width: fit-content;">
+                                style="block-size: 80px; inline-size: fit-content;">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -92,8 +92,8 @@
                     <div class="row">
                         <style>
                             .reqmar {
-                                height: 100%;
-                                width: 100%;
+                                block-size: 100%;
+                                inline-size: 100%;
                                 display: flex;
                                 flex-direction: column;
                                 align-items: start;
@@ -105,13 +105,13 @@
                                 border: solid 1px #94949440;
                                 padding: 20px;
                                 border-radius: 11px;
-                                width: 100%;
+                                inline-size: 100%;
                             }
 
                             .report {
-                                width: 200px;
+                                inline-size: 200px;
                                 border: dashed 2px #000000;
-                                height: 100px;
+                                block-size: 100px;
                                 border-radius: 11px;
                                 display: flex;
                                 opacity: 0.8;
@@ -176,12 +176,12 @@
                                 input[type="file"]::file-selector-button {
                                     border-radius: 4px;
                                     padding: 0 16px;
-                                    height: 40px;
+                                    block-size: 40px;
                                     cursor: pointer;
                                     background-color: white;
                                     border: 1px solid rgba(0, 0, 0, 0.16);
                                     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
-                                    margin-right: 16px;
+                                    margin-inline-end: 16px;
                                     transition: background-color 200ms;
 
 
@@ -207,10 +207,10 @@
                                     text-transform: uppercase;
                                     border-radius: 30px;
                                     background-color: #007bff80;
-                                    margin-top: 20px;
+                                    margin-block-start: 20px;
                                     align-items: center;
                                     justify-content: center;
-                                    height: fit-content;
+                                    block-size: fit-content;
                                     gap: 10px;
                                     transition: all .3s ease-in-out;
                                     display: none;
@@ -249,8 +249,8 @@
 
             <style>
                 .successwait {
-                    max-width: 400px;
-                    height: 40dvh;
+                    max-inline-size: 400px;
+                    block-size: 40dvh;
                     background-color: #ffffff;
                     position: fixed;
 
@@ -272,8 +272,8 @@
 
 
                 .successwait img {
-                    width: 5em;
-                    height: 5em;
+                    inline-size: 5em;
+                    block-size: 5em;
                 }
 
                 .successwait h6 {
@@ -284,13 +284,13 @@
 
                 .linex {
                     position: absolute;
-                    top: 1em;
-                    right: 1em;
+                    inset-block-start: 1em;
+                    inset-inline-end: 1em;
                 }
 
                 .linex button {
                     border: none;
-                    height: 1.5em;
+                    block-size: 1.5em;
                     background-color: transparent;
                     font-size: 1.4em;
                     color: #ab0047;
@@ -423,7 +423,7 @@
                 <h4>Observation Report:</h4>
                 <div class="linexx"><button style="
                 border: none;
-                    height: 1.5em;
+                    block-size: 1.5em;
                     background-color: transparent;
                     font-size: 1.4em;
                     color: #ab0047;
@@ -474,8 +474,8 @@
 
         <style>
             #repPreview {
-                width: 650px;
-                height: 70dvh;
+                inline-size: 650px;
+                block-size: 70dvh;
                 position: absolute;
                 inset: 0;
                 margin: auto;
@@ -505,9 +505,9 @@
 
 
             .maincont {
-                width: 100%;
-                /* height: 100%; */
-                height: max-content;
+                inline-size: 100%;
+                /* block-size: 100%; */
+                block-size: max-content;
                 gap: 10px;
 
 
@@ -515,7 +515,7 @@
 
                 .imagex,
                 .videox {
-                    width: 100%;
+                    inline-size: 100%;
                     display: flex;
                     flex-direction: column;
                     padding: 10px;
@@ -525,17 +525,17 @@
                 }
 
                 .videox video {
-                    width: 100%;
+                    inline-size: 100%;
                     border-radius: 6px;
                 }
 
                 .imagex {
-                    margin-top: 1em;
+                    margin-block-start: 1em;
                 }
 
                 .imagex .imgx {
-                    width: 600px;
-                    height: 100%;
+                    inline-size: 600px;
+                    block-size: 100%;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: auto;
@@ -545,8 +545,8 @@
 
                 .imgx .ibox {
                     border-radius: 6px;
-                    width: 265px;
-                    height: 265px;
+                    inline-size: 265px;
+                    block-size: 265px;
                     overflow: hidden;
                     position: relative;
                     background-color: #f0f0f0;
@@ -556,10 +556,10 @@
                 }
 
                 .ibox img {
-                    max-width: 100%;
-                    max-height: 100%;
-                    width: auto;
-                    height: auto;
+                    max-inline-size: 100%;
+                    max-block-size: 100%;
+                    inline-size: auto;
+                    block-size: auto;
                 }
 
 
