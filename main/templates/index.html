@@ -1,60 +1,30 @@
 {%load static%}
-
 <!DOCTYPE html>
-
 <html lang="en">
 
   <head>
-    <!-- Basic -->
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
     <meta name="theme-color" content="#007bff" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
     <script src="https://kit.fontawesome.com/1f91ac7656.js" crossorigin="anonymous"></script>
-
     <title>Crickvision - PunchBiz</title>
-
-    <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
-    <link rel="stylesheet" href="https://crickvision.github.io/d/css/bootstrap.css">
-    <link rel="stylesheet" href="https://crickvision.github.io/d/css/responsive.css">
-    <link rel="stylesheet" href="https://crickvision.github.io/d/css/style.css">
-    <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Gantari:400,600,700&display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-
+    <script src="{% static 'js/scroll.js' %}" defer></script>
   </head>
 
   <body>
-
     <div class="hero_area">
-      <!-- header section strats -->
       <header class="header_section">
         <div class="container">
           <nav class="navbar navbar-expand-sm custom_nav-container ">
             <a class="navbar-brand" href="">
-              <img src="https://crickvision.github.io/d/i/logo.png" alt="image"
-                style="block-size: 80px; inline-size: fit-content;">
-
+              <img src="https://crickvision.github.io/d/i/logo.png" alt="image" class="logo-image">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fa-solid fa-bars fa-xl" style="color: #007bff;"></i>
+              <i class="fa-solid fa-bars fa-xl"></i>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
@@ -73,8 +43,6 @@
           </nav>
         </div>
       </header>
-      <!-- end header section -->
-      <!-- slider section -->
       <section class=" slider_section ">
         <div class="container">
           <div class="row">
@@ -90,10 +58,8 @@
                   <span class="hixx">
                     with<br>
                   </span>
-                  <span class="hixx"
-                    style="background-image:linear-gradient(45deg,#c38bff,#6b008b);color: transparent;background-clip: text;">
-                    AI<i style="font-size: 0.8em;color: rgb(132, 0, 172); margin-inline-start: 4px;"
-                      class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span class="ai-text hixx">
+                    AI<i class="fa-solid fa-wand-magic-sparkles"></i>
                   </span>
                 </h1>
                 <p class="hixx">
@@ -104,29 +70,23 @@
                 <a href="/signup" class="hixx">
                   Signup
                 </a>
-                <a href="/signin" class="hixx" style="color: #007bff;background-color: transparent;padding-inline-start: 10px;">
+                <a href="/signin" class="hixx login-main">
                   or Login
                 </a>
               </div>
             </div>
-            <div class="col-lg-5 col-md-6 offset-lg-1" style="inline-size: 400px;">
-              <img src="https://crickvision.github.io/d/i/Cricket.svg" style="inline-size: 400px;">
-
-
+            <div class="col-lg-5 col-md-6 offset-lg-1">
+              <img src="https://crickvision.github.io/d/i/Cricket.svg">
             </div>
           </div>
         </div>
       </section>
-      <!-- end slider section -->
     </div>
-
-
-    <!-- footer section -->
     <footer class="container-fluid footer_section">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 col-md-13 mx-auto">
-            <div style="display: flex; justify-content: space-between;">
+            <div class="footer-main-div">
               <div>
                 <p>
                   &copy; 2024 All Rights Reserved By
@@ -135,23 +95,13 @@
               </div>
 
               <div>
-                <p>Made with <i class="fa-regular fa-s fa-heart" style="margin-block-end:-1px;color: #f00;"></i> by <a
-                    href="https://punchbiz.co/" target="_blank">Cricvision team @PunchBiz</a></p>
+                <p>Made with 💙 by <a href="https://punchbiz.co/" target="_blank">Cricvision team @PunchBiz</a></p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </footer>
-    <!-- footer section -->
-
-
-    <script src="https://crickvision.github.io/d/js/jquery-3.4.1.min.jsr"></script>
-    <script src="https://crickvision.github.io/d/js/bootstrap.js"></script>
-    <script src="https://crickvision.github.io/d/js/scroll.js"></script>
-
-
   </body>
 
 </html>

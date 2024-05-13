@@ -1,21 +1,3 @@
-#---------------------------#
-# DEVELOPER DOCUMENTATION   #
-# PROJECT CRICKVISION V1.0  #
-# LANGUAGE  : PYTHON 3      #
-# FRAMEWORK : DJANGO        #
-#---------------------------#
-# packages:                 #
-#      django,              #
-#      pyrebase,            #
-#      pyrebase3,           #
-#      pyrebase4,           #
-#      pyrebase5,           #
-#      setuptools,          #
-#      numpy,               #
-#      python-dotenv        #
-#                           #
-# # # # # # # # # # # # # # #
-
 from django.shortcuts import render, redirect
 from django.contrib import auth
 import pyrebase
@@ -107,7 +89,6 @@ def signInValidate(request):
                         emails = curr_user.getEmaillist()
                         user_ids = curr_user.getIdlist()
                         requests = curr_user.getRequestlist()
-                        
                         uUrls = curr_user.getuUrlslist()
                         size = len(user_ids)
                         print(size)
@@ -239,6 +220,3 @@ def reportSubmit(request):
         print(size)
         zipped_lists = zip(names,emails,user_ids,requests,uUrls)
         return render(request,"admin.html", {"namex":name,"zipped_lists":zipped_lists, "notif": f"Mail Sent to {rMail}"})
-        
-
-

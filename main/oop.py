@@ -2,7 +2,7 @@ class currentUser:
     userid = ''
     videocount = 0
     name = ''
-    credit = 1
+    credit = 10
     sMail = 'kavinkumar2628@gmail.com'
     sPass = 'zjwa aihu lzzi hbfz'
     devMail = "kavinkumarkavinkumar365@gmail.com"
@@ -10,6 +10,7 @@ class currentUser:
         self.userid = idx
         self.videocount = vc
         self.name = n
+
     def getUid(self):
         return self.userid
     def getCredit(self):
@@ -82,13 +83,10 @@ class developer:
     import os
     from dotenv import load_dotenv
     import pyrebase
-
     import smtplib
     from email.mime.text import MIMEText
     from email.mime.multipart import MIMEMultipart
     load_dotenv()
-
-
     config = {
     "apiKey": os.getenv("FIREBASE_API_KEY"),
     "authDomain": os.getenv("FIREBASE_AUTH_DOMAIN"),
@@ -99,7 +97,6 @@ class developer:
     "appId": os.getenv("FIREBASE_APP_ID"),
     "measurementId": os.getenv("FIREBASE_MEASUREMENT_ID"),
     }
-
     firebase = pyrebase.initialize_app(config)
     db = firebase.database()
     def __init__(self,n,idx):
@@ -110,9 +107,6 @@ class developer:
         self.ids = []
         self.request = []
         self.uUrls = []
-
-
-
     def getAllUsers(self):
         def addDetails(self,uId):
             uType = self.db.child("users").child(uId).child("details").child("type").get().val()
@@ -128,8 +122,6 @@ class developer:
                     uUrl = self.db.child("users").child(uId).child("details").child("uploads").child("video1").get().val()
                     self.uUrls.append(uUrl)
 
-
-
         all_users = self.db.child("users").get()
         print(all_users)
         all_user_ids = self.db.child("users").shallow().get()
@@ -143,11 +135,9 @@ class developer:
         for i in range(0,len(adara)):
             print(adara[i])
             addDetails(self,adara[i])
-
         print(self.names)
         print(self.emails)
         print(self.ids)
-
     def getNamelist(self):
         return self.names
     def getIdlist(self):

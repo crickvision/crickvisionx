@@ -10,3 +10,8 @@ const observer = new IntersectionObserver((entries) => {
     const hEm = document.querySelectorAll('.hixx');
     hEm.forEach((el) => observer.observe(el));
     
+
+    function gobck() {
+        event.preventDefault()
+        window.history.back()
+    }
