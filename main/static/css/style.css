@@ -12771,7 +12771,7 @@ div.card:nth-of-type(3) {
   justify-content: space-between;
 }
 
-.admin .observation {
+#observation {
   transform: translateY(-100dvh);
   z-index: 1000;
 }
